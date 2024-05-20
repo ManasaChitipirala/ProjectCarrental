@@ -1,19 +1,3 @@
-/*Create following tables in SQL Schema with appropriate class and write the unit test case for the
-application.
-SQL Tables:
-1. Customer Table:
-• CustomerID (Primary Key): Unique identifier for each customer.
-• FirstName: First name of the customer.
-• LastName: Last name of the customer.
-• Email: Email address of the customer for communication.
-• PhoneNumber: Contact number of the customer.
-• Address: Customer's residential address.
-• Username: Unique username for customer login.
-• Password: Securely hashed password for customer authentication.
-• RegistrationDate: Date when the customer registered.
-*/
-
-
 CREATE TABLE Customer
 (
     CustomerID INT PRIMARY KEY IDENTITY(1, 1),
@@ -27,18 +11,6 @@ CREATE TABLE Customer
     RegistrationDate DATETIME NOT NULL
 );
 
-/*
-
-2. Vehicle Table:
-• VehicleID (Primary Key): Unique identifier for each vehicle.
-• Model: Model of the vehicle.
-• Make: Manufacturer or brand of the vehicle.
-• Year: Manufacturing year of the vehicle.
-• Color: Color of the vehicle.
-• RegistrationNumber: Unique registration number for each vehicle.
-• Availability: Boolean indicating whether the vehicle is available for rent.
-• DailyRate: Daily rental rate for the vehicle.*/
-
 CREATE TABLE Vehicle
 (
     VehicleID INT PRIMARY KEY IDENTITY(1, 1),
@@ -50,17 +22,6 @@ CREATE TABLE Vehicle
     Availability BIT NOT NULL,
     DailyRate DECIMAL(5, 2) NOT NULL
 );
-
-/*
-3. Reservation Table:
-• ReservationID (Primary Key): Unique identifier for each reservation.
-• CustomerID (Foreign Key): Foreign key referencing the Customer table.
-• VehicleID (Foreign Key): Foreign key referencing the Vehicle table.
-• StartDate: Date and time of the reservation start.
-• EndDate: Date and time of the reservation end.
-• TotalCost: Total cost of the reservation.
-• Status: Current status of the reservation (e.g., pending, confirmed, completed).
-*/
 
 CREATE TABLE Reservation
 (
@@ -75,18 +36,6 @@ CREATE TABLE Reservation
     FOREIGN KEY (VehicleID) REFERENCES Vehicle(VehicleID)
 );
 
-/*
-4. Admin Table:
-• AdminID (Primary Key): Unique identifier for each admin.
-• FirstName: First name of the admin.
-• LastName: Last name of the admin.
-• Email: Email address of the admin for communication.
-• PhoneNumber: Contact number of the admin.
-• Username: Unique username for admin login.
-• Password: Securely hashed password for admin authentication.
-• Role: Role of the admin within the system (e.g., super admin, fleet manager).
-• JoinDate: Date when the admin joined the system.
-*/
 CREATE TABLE Admin
 (
     AdminID INT PRIMARY KEY IDENTITY(1, 1),
