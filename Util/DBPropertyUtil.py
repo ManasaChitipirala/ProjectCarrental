@@ -1,8 +1,8 @@
 class PropertyUtil:
     @staticmethod
     def getProperty():
-        server_name = "LAPTOP-K22HCAQN\SQLEXPRESS"
-        database_name = "CarConnect"
+        server_name = "DESKTOP-BG1K7HN\SQLEXPRESS05"
+        database_name = "CarRental"
         
         
         conn_str = (
